@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>User Information</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=Source+Sans+3:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>User Information</h1>
+      <p>Enter a name and an email address. Your details are saved securely.</p>
+    </header>
+
+    <section class="panel" aria-labelledby="form-title">
+      <h2 id="form-title">Your details</h2>
+      <form id="user-form" novalidate>
+        <div class="field">
+          <label for="name">Full name</label>
+          <input type="text" id="name" name="name" autocomplete="name" placeholder="Asha Gautam" aria-describedby="name-error">
+          <div class="error" id="name-error" role="alert"></div>
+        </div>
+        <div class="field">
+          <label for="email">Email address</label>
+          <input type="email" id="email" name="email" autocomplete="email" placeholder="asha@example.com" aria-describedby="email-error">
+          <div class="error" id="email-error" role="alert"></div>
+        </div>
+        <button type="submit" class="btn btn-primary" id="submit-btn">Submit</button>
+      </form>
+      <div class="status" id="status" role="status"></div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
